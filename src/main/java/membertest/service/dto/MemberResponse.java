@@ -8,13 +8,15 @@ public class MemberResponse {
     private String name;
     private String password;
 
-    public MemberResponse(String email, String name, String password) {
+    public MemberResponse(Long id, String email, String name, String password) {
+        this.id = id;
         this.email = email;
         this.name = name;
         this.password = password;
     }
+
     public static MemberResponse from(Member member) {
-        return new MemberResponse(member.getEmail(), member.getName(), member.getPassword());
+        return new MemberResponse(member.getId(), member.getEmail(), member.getName(), member.getPassword());
     }
 
     public Long getId() {

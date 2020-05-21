@@ -27,10 +27,6 @@ public class Member {
         this.password = password;
     }
 
-    public static Member from(MemberRequest memberRequest) {
-        return new Member(memberRequest.getEmail(), memberRequest.getName(), memberRequest.getEmail());
-    }
-
     public Long getId() {
         return id;
     }
